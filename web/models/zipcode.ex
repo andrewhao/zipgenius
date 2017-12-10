@@ -1,17 +1,19 @@
 defmodule Zipgenius.Zipcode do
   use Zipgenius.Web, :model
+  @derive {Phoenix.Param, key: :zip}
 
+  # @primary_key {:idtimezonebyzipcode, :id, autogenerate: false}
   @primary_key false
   schema "timezonebyzipcode" do
-    field :idtimezonebyzipcode, :id
-    field :zip, :string
-    field :city, :string
-    field :county, :string
-    field :state, :string
-    field :country, :string
-    field :timezone, :string
-    field :addressquality, :integer
-    field :source, :string
+    field(:idtimezonebyzipcode, :id)
+    field(:zip, :string)
+    field(:city, :string)
+    field(:county, :string)
+    field(:state, :string)
+    field(:country, :string)
+    field(:timezone, :string)
+    field(:addressquality, :integer)
+    field(:source, :string)
   end
 
   @doc """
@@ -20,6 +22,15 @@ defmodule Zipgenius.Zipcode do
   def changeset(struct, params \\ %{}) do
     struct
     |> cast(params, [:zip, :city, :county, :state, :country, :timezone, :addressquality, :source])
-    |> validate_required([:zip, :city, :county, :state, :country, :timezone, :addressquality, :source])
+    |> validate_required([
+         :zip,
+         :city,
+         :county,
+         :state,
+         :country,
+         :timezone,
+         :addressquality,
+         :source
+       ])
   end
 end
