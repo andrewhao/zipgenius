@@ -36,9 +36,11 @@ defmodule Zipgenius.ZipcodeControllerTest do
            }
   end
 
-  test "renders page not found when id is nonexistent", %{conn: conn} do
-    assert_error_sent(404, fn ->
-      get(conn, zipcode_path(conn, :show, -1))
-    end)
+  test "renders 404 error message when not found", %{conn: conn} do
+    conn = get(conn, zipcode_path(conn, :show, -1))
+
+    assert json_response(conn, 404) == %{
+             "message" => "Unable to find that zip code"
+           }
   end
 end

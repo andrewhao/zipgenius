@@ -12,4 +12,8 @@ defmodule Zipgenius.ZipcodeView do
   def render("zipcode.json", %{zipcode: zipcode}) do
     %{zip: zipcode.zip, timezone: zipcode.timezone}
   end
+
+  def render("not_found.json", %{}) do
+    %{message: "Unable to find that zip code"}
+  end
 end

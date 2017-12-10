@@ -9,7 +9,15 @@ defmodule Zipgenius.ZipcodeController do
   end
 
   def show(conn, %{"id" => zip}) do
-    zipcode = Repo.get_by!(Zipcode, zip: zip)
-    render(conn, "show.json", zipcode: zipcode)
+    case Repo.get_by(Zipcode, zip: zip) do
+      nil ->
+        conn
+        |> put_status(:not_found)
+        |> render("not_found.json", %{})
+
+      zipcode ->
+        conn
+        |> render("show.json", zipcode: zipcode)
+    end
   end
 end
