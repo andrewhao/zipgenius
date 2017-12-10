@@ -12,9 +12,9 @@ config :zipgenius, Zipgenius.Endpoint,
   code_reloader: true,
   check_origin: false,
   secret_key_base: System.get_env("SECRET_KEY_BASE"),
-  watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin",
-                    cd: Path.expand("../", __DIR__)]]
-
+  watchers: [
+    node: ["node_modules/brunch/bin/brunch", "watch", "--stdin", cd: Path.expand("../", __DIR__)]
+  ]
 
 # Watch static and templates for browser reloading.
 config :zipgenius, Zipgenius.Endpoint,
@@ -36,9 +36,8 @@ config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
 config :zipgenius, Zipgenius.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  adapter: Ecto.Adapters.MySQL,
+  username: "root",
   database: "zipgenius_dev",
   hostname: "localhost",
   pool_size: 10

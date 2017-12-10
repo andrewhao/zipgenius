@@ -11,7 +11,7 @@ config :logger, level: :warn
 
 # Configure your database
 config :zipgenius, Zipgenius.Repo,
-  adapter: Ecto.Adapters.Postgres,
+  adapter: Ecto.Adapters.MySQL,
   username: "postgres",
   password: "postgres",
   database: "zipgenius_test",
