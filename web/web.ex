@@ -29,6 +29,7 @@ defmodule Zipgenius.Web do
   def controller do
     quote do
       use Phoenix.Controller
+      use ScoutApm.Instrumentation
 
       alias Zipgenius.Repo
       import Ecto

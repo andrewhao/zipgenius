@@ -32,7 +32,8 @@ defmodule Zipgenius.Mixfile do
         :logger,
         :gettext,
         :phoenix_ecto,
-        :mariaex
+        :mariaex,
+        :scout_apm
       ]
     ]
   end
@@ -56,6 +57,7 @@ defmodule Zipgenius.Mixfile do
       {:cowboy, "~> 1.0"},
       {:phoenix_slime, "~> 0.8.0"},
       {:wallaby, "~> 0.14.0", only: :test},
+      {:scout_apm, "~> 0.0"},
       {:ex_machina, "~> 1.0", only: :test}
     ]
   end
