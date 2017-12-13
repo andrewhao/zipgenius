@@ -1,5 +1,8 @@
 # Bureaucrat
-Bureaucrat.start(writer: Bureaucrat.MarkdownWriter)
+Bureaucrat.start(
+  writer: Bureaucrat.MarkdownWriter,
+  default_path: "doc/README.md"
+)
 
 ExUnit.start(formatters: [ExUnit.CLIFormatter, Bureaucrat.Formatter])
 
