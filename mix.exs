@@ -58,7 +58,8 @@ defmodule Zipgenius.Mixfile do
       {:phoenix_slime, "~> 0.8.0"},
       {:wallaby, "~> 0.14.0", only: :test},
       {:scout_apm, "~> 0.0"},
-      {:ex_machina, "~> 1.0", only: :test}
+      {:ex_machina, "~> 1.0", only: :test},
+      {:bureaucrat, "~> 0.1.4"}
     ]
   end
 
