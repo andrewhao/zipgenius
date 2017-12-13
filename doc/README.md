@@ -6,6 +6,8 @@ Please open issues in the [zipgenius Github project](https://www.github.com/andr
 
 All data is courtesy of the [zip2timezone](https://sourceforge.net/projects/zip2timezone/files/) project on Sourceforge.
 
+All API endpoints use the deployed base URL of [https://zipgenius.herokuapp.com/](https://zipgenius.herokuapp.com/) unless specifically noted.
+
 
 
 ## Endpoints
@@ -32,7 +34,7 @@ accept: application/json
 ```
 content-type: application/json; charset=utf-8
 cache-control: max-age=31556926
-x-request-id: jpvv1l8mv44bcm5ukuo2ekpd12tl4srk
+x-request-id: 0g813solnc7c1aakadgn7jaop6ooq27t
 ```
 * __Response body:__
 ```json
@@ -62,7 +64,7 @@ accept: application/json
 ```
 content-type: application/json; charset=utf-8
 cache-control: max-age=31556926
-x-request-id: 12h9dpad3san73dadkjhj6rbd6ur670m
+x-request-id: aahp9bmeh12eu1mvicrh2h2ffaf1gu8j
 ```
 * __Response body:__
 ```json
@@ -89,7 +91,7 @@ accept: application/json
 ```
 content-type: application/json; charset=utf-8
 cache-control: max-age=31556926
-x-request-id: h2vias1ucs80p9h1r294a7731js6jl0m
+x-request-id: oeuo3f932d0jopcdin5i1rlqsug721ii
 ```
 * __Response body:__
 ```json
