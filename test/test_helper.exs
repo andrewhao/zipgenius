@@ -1,5 +1,6 @@
 # Bureaucrat
-Bureaucrat.start()
+Bureaucrat.start(writer: Bureaucrat.MarkdownWriter)
+
 ExUnit.start(formatters: [ExUnit.CLIFormatter, Bureaucrat.Formatter])
 
 Ecto.Adapters.SQL.Sandbox.mode(Zipgenius.Repo, :manual)

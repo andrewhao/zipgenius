@@ -59,7 +59,10 @@ defmodule Zipgenius.Mixfile do
       {:wallaby, "~> 0.14.0", only: :test},
       {:scout_apm, "~> 0.0"},
       {:ex_machina, "~> 1.0", only: :test},
-      {:bureaucrat, "~> 0.1.4"}
+      {
+        :bureaucrat,
+        github: "api-hogs/bureaucrat", ref: "1e9d355a786ec6147f510ceb3ff3c772121e2be3"
+      }
     ]
   end
 
