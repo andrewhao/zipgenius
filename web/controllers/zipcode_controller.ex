@@ -5,7 +5,10 @@ defmodule Zipgenius.ZipcodeController do
 
   def index(conn, _params) do
     zipcodes = Repo.all(Zipcode)
-    render(conn, "index.json", zipcodes: zipcodes)
+
+    conn
+    |> put_resp_header("cache-control", "max-age=31556926")
+    |> render("index.json", zipcodes: zipcodes)
   end
 
   def show(conn, %{"id" => zip}) do
@@ -13,10 +16,12 @@ defmodule Zipgenius.ZipcodeController do
       nil ->
         conn
         |> put_status(:not_found)
+        |> put_resp_header("cache-control", "max-age=31556926")
         |> render("not_found.json", %{})
 
       zipcode ->
         conn
+        |> put_resp_header("cache-control", "max-age=31556926")
         |> render("show.json", zipcode: zipcode)
     end
   end

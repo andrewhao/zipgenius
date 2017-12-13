@@ -25,6 +25,8 @@ defmodule Zipgenius.ConnCase do
       import Ecto.Changeset
       import Ecto.Query
 
+      import Bureaucrat.Helpers
+
       import Zipgenius.Router.Helpers
 
       # The default endpoint for testing
