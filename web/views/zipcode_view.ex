@@ -10,7 +10,7 @@ defmodule Zipgenius.ZipcodeView do
   end
 
   def render("zipcode.json", %{zipcode: zipcode}) do
-    attrs = ~W(zip timezone city state country)
+    attrs = ~w(zip timezone city state country)a
 
     zipcode
     |> Map.take(attrs)
