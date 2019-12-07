@@ -23,7 +23,7 @@ config :logger, :console,
 
 # Scout log instrumentation
 config :zipgenius, Zipgenius.Repo,
-  loggers: [{Ecto.LogEntry, :log, []}, {ScoutApm.Instruments.EctoLogger, :log, []}]
+  loggers: [{Ecto.LogEntry, :log, [:info]}, {ScoutApm.Instruments.EctoLogger, :log, []}]
 
 config :phoenix, :template_engines, slim: PhoenixSlime.Engine
 
