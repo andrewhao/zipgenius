@@ -19,12 +19,12 @@ config :zipgenius, Zipgenius.Endpoint,
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
-  level: :info,
+  level: :error,
   metadata: [:request_id]
 
 # Scout log instrumentation
 config :zipgenius, Zipgenius.Repo,
-  loggers: [{Ecto.LogEntry, :log, [:info]}, {ScoutApm.Instruments.EctoLogger, :log, []}]
+  loggers: [{Ecto.LogEntry, :log, [:error]}, {ScoutApm.Instruments.EctoLogger, :log, []}]
 
 config :phoenix, :template_engines, slim: PhoenixSlime.Engine
 
