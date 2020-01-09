@@ -1,6 +1,12 @@
-## Zipgenius - a zipcode-to-timezone API
+## Zipgenius
+
+A zipcode-to-timezone API
+
+(The live API is no longer being maintained)
 
 ### FOR API DOCUMENTATION, [VIEW THE DOCS HERE](blob/master/doc/README.md)
+
+---
 
 ## Running the server
 
